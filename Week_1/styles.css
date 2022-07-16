@@ -34,3 +34,36 @@ body {
 .image-hero img {
   border-radius: 10%;
 }
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-wrapper h2,
+.table-wrapper h2 {
+  padding-bottom: 1em;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.5em;
+  font-family: "EB Garamond", serif;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #6ba136;
+  color: white;
+}
+
+table td:hover {
+  background-color: #bee797;
+}
