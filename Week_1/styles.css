@@ -20,10 +20,17 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 5em;
+  padding: 3em 0 3em 0;
+  border-radius: 15px;
+  background: rgb(243, 243, 243);
 }
 
 .image-hero p {
   width: clamp(23ch, 30%, 46ch);
   text-align: justify;
   margin-right: 2em;
+}
+
+.image-hero img {
+  border-radius: 10%;
 }
