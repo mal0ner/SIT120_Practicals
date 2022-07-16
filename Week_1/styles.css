@@ -11,5 +11,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1em;
+  margin-bottom: 5em;
+}
+
+.image-hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.image-hero p {
+  width: clamp(23ch, 30%, 46ch);
+  text-align: justify;
+  margin-right: 2em;
 }
