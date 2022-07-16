@@ -61,11 +61,21 @@ em:hover {
 .footer-wrapper {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.form-wrapper,
+.table-wrapper,
+#date-wrapper,
+.vue-wrapper {
+  margin: 2em;
 }
 
 .form-wrapper h2,
 .table-wrapper h2,
-#date-wrapper h2 {
+#date-wrapper h2,
+.vue-wrapper h2 {
   padding-bottom: 1em;
 }
 

@@ -84,12 +84,21 @@
         <button id="date-button" onclick="getDate()">Get the date!</button>
         <p id="date-text">bla</p>
       </div>
-    </div>
 
-    <!-- This begins our vue section -->
-    <div class="vue-wrapper">
-      <h2>Vue App</h2>
-      <div id="app"></div>
+      <!-- This begins our vue section -->
+      <div class="vue-wrapper">
+        <h2>Vue Shopping App</h2>
+        <div id="app">
+          <div
+            v-for="vege in shopping"
+            :key="vege.title"
+            :style="{ textDecoration: vege.checked? 'line-through':'none'}"
+          >
+            <input type="checkbox" v-model="vege.checked" />
+            {{vege.title}}
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Internal Styles -->
@@ -104,6 +113,17 @@
         const date = new Date();
         document.getElementById("date-text").innerHTML = date.toDateString();
       };
+
+      let vue = new Vue({
+        el: "#app",
+        data: {
+          shopping: [
+            { title: "Tomatoes", checked: false },
+            { title: "Pickles", checked: false },
+            { title: "Onions", checked: false },
+          ],
+        },
+      });
     </script>
   </body>
 </html>
