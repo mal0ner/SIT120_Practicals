@@ -80,7 +80,7 @@
       </div>
       <div id="date-wrapper">
         <h2>JS Date Button</h2>
-        <button id="date-button">Get the date!</button>
+        <button id="date-button" onclick="getDate()">Get the date!</button>
         <p id="date-text">bla</p>
       </div>
     </div>
@@ -89,5 +89,11 @@
         font-family: "Oswald", sans-serif;
       }
     </style>
+    <script>
+      getDate = () => {
+        const date = new Date();
+        document.getElementById("date-text").innerHTML = date.toDateString();
+      };
+    </script>
   </body>
 </html>
