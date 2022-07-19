@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 1em;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #bee797;
+  border-radius: 10%;
+  transition: 0.15s ease-in-out;
+}
+
+h1:hover::after {
+  width: 100%;
+}
+
+.image-hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5em;
+  padding: 3em 0 3em 0;
+  border-radius: 15px;
+  background: rgb(243, 243, 243);
+}
+
+.image-hero p {
+  width: clamp(23ch, 30%, 46ch);
+  text-align: justify;
+  margin-right: 2em;
+}
+
+em {
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0.3);
+  transition: text-decoration-color 250ms;
+}
+
+em:hover {
+  text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+.image-hero img {
+  border-radius: 10%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.form-wrapper,
+.table-wrapper,
+#date-wrapper,
+.vue-wrapper {
+  margin: 2em;
+}
+
+.form-wrapper h2,
+.table-wrapper h2,
+#date-wrapper h2,
+.vue-wrapper h2 {
+  padding-bottom: 1em;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.5em;
+  font-family: "EB Garamond", serif;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #6ba136;
+  color: white;
+}
+
+table td:hover {
+  background-color: #bee797;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#date-button {
+  margin-left: 0.5em;
+  margin-bottom: 0.75em;
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+}
+
+#date-button:hover {
+  background-color: rgba(22, 22, 22, 0.1);
+}
+
+#date-text {
+  padding: 0.5em;
+  outline: 1px solid;
+  outline-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 1em;
+}
