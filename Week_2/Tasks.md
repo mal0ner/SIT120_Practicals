@@ -4,6 +4,14 @@ Cameron Malone - 218344989
 ## Pass Task 1: Understand Responsive Web Pages and Apps instruction
 _Write 1-2 sentences reflections of what responsive design is and why it is important. (Max 150 words)_
 
+### Content:
+  Responsive web design is a design paradigm for web applications that revolves around
+  creating and developing content in such a way that it 'responds' to changes in
+  the users viewing environment, adapting element size and positioning for optimal
+  usage regardless of screen size, resolution or orientation. RWD is important in todays
+  landscape as mobile devices are becoming more and more popular, meaning the developer
+  cannot rely on a consistent desktop viewing experience.
+
 ## Pass Task 2: Understanding how responsive web design can be implemented using CSS
 _Capture Screenshots and write 1-2 sentence reflection about how to implement responsive web design with CSS; hint: @media rule (Max 150 words)_
 
