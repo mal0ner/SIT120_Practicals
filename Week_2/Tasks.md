@@ -51,10 +51,10 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
   Please see the screenshots below for a demonstration of the container width adjustment based on our breakpoints.
 
   #### Breakpoints
-  ![Breakpoint 1](./Task_2_Media_Queries/tiny.png)
-  ![Breakpoint 2](./Task_2_Media_Queries/small.png)
-  ![Breakpoint 3](./Task_2_Media_Queries/medium.png)
-  ![Breakpoint 4](./Task_2_Media_Queries/large.png)
+  <img src="./Task_2_Media_Queries/tiny.png" width="200">
+  <img src="./Task_2_Media_Queries/small.png" width="200">
+  <img src="./Task_2_Media_Queries/medium.png" width="200">
+  <img src="./Task_2_Media_Queries/large.png" width="200">
 
 
 ## Credit Task 3: User Stories and UI/UX design for your project
