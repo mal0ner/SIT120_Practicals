@@ -15,6 +15,40 @@ _Write 1-2 sentences reflections of what responsive design is and why it is impo
 ## Pass Task 2: Understanding how responsive web design can be implemented using CSS
 _Capture Screenshots and write 1-2 sentence reflection about how to implement responsive web design with CSS; hint: @media rule (Max 150 words)_
 
+### Content: 
+  While certain design patterns and page structures can be used in HTML to ease the implementation
+  of responsive design, it is most often realised throught the use of CSS. Media queries are an important
+  feature of CSS that allow for conditional styling based on screen and viewport properties,
+  meaning we can define separate styles for a wide range of use cases. See below for a basic demonstration
+  of media query usage:
+
+  Our page consists of a basic card element with a header and some generic text.
+
+  ```
+  <div class="container">
+    <h1 id="title"> Media Query Container>
+    <p id="main-text"> Lorem ipsum dolor sit, amet...</p>
+  </div>
+  ```
+
+  In order to make this design responsive, we should like to adjust the width of the container element
+  according to the width of the viewport through which the user is accessing the page. 
+
+  ```
+  .container {
+      /* persistent styles */
+    }
+
+  @media screen and (max-width: 480px) { .container { width: 23ch } }
+  @media screen and (min-width: 480px) { .container { width: 36ch } }
+  @media screen and (max-width: 768px) { .container { width: 46ch } }
+  @media screen and (max-width: 1024px) { .container { width: 60ch } }
+  ```
+
+  By using the media queries as above, we can define specific points (known as breakpoints) where we
+  wish to adjust the styles of specific elements. The above breakpoint widths follow widely used conventions
+  and work well for a wide range of devices ranging from small handheld devices to wide-screen desktop environments.
+
 ## Credit Task 3: User Stories and UI/UX design for your project
 _Write 2 user stories for web page functions e.g., login function, produce a Figma demo (1 ~ 2 pages). Write 1-2 sentences on why user stories and UI/UX prototypes are important
 in responsive web design._
