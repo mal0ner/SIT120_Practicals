@@ -51,12 +51,17 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
   Please see the screenshots below for a demonstration of the container width adjustment based on our breakpoints.
 
   #### Breakpoints
-  <img src="./Task_2_Media_Queries/tiny.png" width="200">
-  <img src="./Task_2_Media_Queries/small.png" width="200">
-  <img src="./Task_2_Media_Queries/medium.png" width="200">
-  <img src="./Task_2_Media_Queries/large.png" width="200">
-
-
+  <div class="container">
+    <img src="./Task_2_Media_Queries/tiny.png" width="200">
+    <img src="./Task_2_Media_Queries/small.png" width="200">
+    <img src="./Task_2_Media_Queries/medium.png" width="200">
+    <img src="./Task_2_Media_Queries/large.png" width="200">
+  </div>
+  <style>
+    .container {
+        display: flex;
+      }
+  </style>
 ## Credit Task 3: User Stories and UI/UX design for your project
 _Write 2 user stories for web page functions e.g., login function, produce a Figma demo (1 ~ 2 pages). Write 1-2 sentences on why user stories and UI/UX prototypes are important
 in responsive web design._
