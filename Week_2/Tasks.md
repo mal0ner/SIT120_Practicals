@@ -13,10 +13,11 @@ in responsive web design._
 ## Distinction Task 4: Use Graphics, media and APIs (Homework)
 _In this task you will improve your web page by adding graphics, media and some other APIs such as Canvas,
 Audio, video, plugins, Geo-location APIs and drag/drop. You must discuss/demonstrate to your tutor.
-**Tasks to Submit**: Develop one page including...
+**Tasks to Submit**: Develop one page including..._
 - Canvas (example a line)
 - Video tag
 - Audio tag
 - Embedded YouTube video
-Capture Screenshots and write 1-2 sentences on the utility of these elements while designing a Responsive
+
+_Capture Screenshots and write 1-2 sentences on the utility of these elements while designing a Responsive
 web app._
