@@ -1,4 +1,5 @@
-# This is a test
+# SIT120 Week 2 Practical Tasks
+Cameron Malone - 218344989
 
 ## Pass Task 1: Understand Responsive Web Pages and Apps instruction
 _Write 1-2 sentences reflections of what responsive design is and why it is important. (Max 150 words)_
