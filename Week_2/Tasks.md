@@ -57,6 +57,7 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
     <img src="./Task_2_Media_Queries/medium.png" width="200">
     <img src="./Task_2_Media_Queries/large.png" width="200">
   </div>
+
 ## Credit Task 3: User Stories and UI/UX design for your project
 _Write 2 user stories for web page functions e.g., login function, produce a Figma demo (1 ~ 2 pages). Write 1-2 sentences on why user stories and UI/UX prototypes are important
 in responsive web design._
