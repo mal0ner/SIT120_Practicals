@@ -24,7 +24,7 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
 
   Our page consists of a basic card element with a header and some generic text.
 
-  ```
+  ```html
   <div class="container">
     <h1 id="title"> Media Query Container>
     <p id="main-text"> Lorem ipsum dolor sit, amet...</p>
@@ -34,7 +34,7 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
   In order to make this design responsive, we should like to adjust the width of the container element
   according to the width of the viewport through which the user is accessing the page. 
 
-  ```
+  ```css
   .container {
       /* persistent styles */
     }
@@ -48,6 +48,14 @@ _Capture Screenshots and write 1-2 sentence reflection about how to implement re
   By using the media queries as above, we can define specific points (known as breakpoints) where we
   wish to adjust the styles of specific elements. The above breakpoint widths follow widely used conventions
   and work well for a wide range of devices ranging from small handheld devices to wide-screen desktop environments.
+  Please see the screenshots below for a demonstration of the container width adjustment based on our breakpoints.
+
+  #### Breakpoints
+  ![Breakpoint 1](/Task_2_Media_Queries/tiny.png)
+  ![Breakpoint 2](/Task_2_Media_Queries/small.png)
+  ![Breakpoint 3](/Task_2_Media_Queries/medium.png)
+  ![Breakpoint 4](/Task_2_Media_Queries/large.png)
+
 
 ## Credit Task 3: User Stories and UI/UX design for your project
 _Write 2 user stories for web page functions e.g., login function, produce a Figma demo (1 ~ 2 pages). Write 1-2 sentences on why user stories and UI/UX prototypes are important
