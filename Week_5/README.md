@@ -36,3 +36,31 @@ can maintain state independent of other instances of the same component.
 ```
 
 This architecture allows for the developer to create large, complex web applications through the composition of smaller and more generic components whose state can be manipulated to achieve the desired effect.
+
+## Task 2: Understanding Handling User Input
+
+**Reflection**:
+
+As another example of a v- prefixed Vue directive, v-model is a method for binding data between a Vue
+instance and the wide range of user input elements available in HTML.
+
+```jsx
+<div id="app">
+    <input v-model="text">
+    <p> {{ text }} </p>
+</div>
+
+let app = new Vue({
+    el: '#app',
+    data: {
+        text: '',
+    }
+})
+```
+
+In accordance with Vue's focus on reactive state, a declaratively rendered
+element which references the data to which the input is bound will reflect
+changes to its state in real time. V-model has interop and defined behaviour for
+an array of different input types including text-areas, radio buttons, checkboxes and select elements, as well as a set of helpful functions or
+'modifiers' that can be applied to the user input that allow the developer
+to receive the data in the desired format.
