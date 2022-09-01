@@ -111,3 +111,8 @@ Vue.component("article", {
   //...
 });
 ```
+
+- **_Events_**: The v-on directive allows for us to specify behaviour for DOM elements in reaction to certain types of events that we can 'listen' for. Furthermore, the $emit method allows for developers to define their own events and by extension pass information from a child element to a parent element.
+
+- **_Slots_**: slots are reserved DOM elements defined in a component's template that allow us to 'inject' markup. Instead of being achieved through custom attributes, slots can be filled
+  by populating the element. Slots can be named and also have the same scope as the rest of the template in which they are written.
