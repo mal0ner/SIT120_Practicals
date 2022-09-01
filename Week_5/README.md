@@ -97,3 +97,17 @@ Vue.component("parent-component", {
   components: { myComponent: "component-name" },
 });
 ```
+
+## Task 4: Props, Event emitters and Slots
+
+- **_Props_**: Props, or 'properties' are a method for the unidirectional passing of data from a parent to a child component. External data that a component may wish to utilise can be defined as a prop in its options as an array of string prop identifiers (or an object of k-V
+  pairs if the type should need to be specified). When actually using components, props accept values through the HTML attribute syntax. For dynamically updating prop values, we can use the familiar v-bind:prop-name directive.
+
+```js
+Vue.component("article", {
+  props: ["title", "author", "age"],
+  // or
+  props: { title: String, author: String, age: Number },
+  //...
+});
+```
