@@ -64,3 +64,36 @@ changes to its state in real time. V-model has interop and defined behaviour for
 an array of different input types including text-areas, radio buttons, checkboxes and select elements, as well as a set of helpful functions or
 'modifiers' that can be applied to the user input that allow the developer
 to receive the data in the desired format.
+
+## Task 3: Learning Component Registration
+
+**Reflection**:
+
+In Vue, registration essentially refers to the scope at which a component
+is 'visible' or available for use in templating. 'Globally' registered components are created via the Vue.component() method and, hence the name, are universally available across the app. Locally registered components are defined as a simple variable using standard syntax and are only usable by components
+who have specified its name in its options within the _components_ object. Global components are packed in the javascript bundle loaded by the user regardless of whether or not they are in use, hurting user experience; use local components wherever possible.
+
+Global Component Registration:
+
+```js
+Vue.component("component-name", {
+  //...options...
+});
+```
+
+Local Component Registration:
+
+```js
+let Component = {
+  //...options...
+};
+
+//component in which it is registered.
+Vue.component("parent-component", {
+  data: function () {
+    //...
+  },
+  template: "<h1></h1>",
+  components: { myComponent: "component-name" },
+});
+```
