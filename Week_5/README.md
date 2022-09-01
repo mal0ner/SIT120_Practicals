@@ -35,4 +35,4 @@ can maintain state independent of other instances of the same component.
 </div>
 ```
 
-This architecture allows for the developer to create large and complex web applications through the composition and combination of smaller and more generic components whose state can be manipulated to achieve the desired effect.
+This architecture allows for the developer to create large, complex web applications through the composition of smaller and more generic components whose state can be manipulated to achieve the desired effect.
