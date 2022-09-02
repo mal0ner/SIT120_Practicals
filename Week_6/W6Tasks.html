@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Week 6 Tasks - Handling User Input</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>SIT120 Week 6: Handling User Input with Vue</h1>
+      <h3>Task 1: using v-model directive</h3>
+      <label for="email">email: </label>
+      <input type="email" v-model="email" id="email" />
+      <p>Email is: {{ email }}</p>
+      <label for="password">password: </label>
+      <input type="password" v-model="password" id="password" />
+      <p>Password is: {{ password }}</p>
+      <label for="phone">phone: </label>
+      <input type="text" v-model="phone" id="phone" placeholder="+61 | ..." />
+      <p>Phone number is: {{ phone }}</p>
+      <h3>Task 2: Checkboxes</h3>
+      <p>Please check any of the following which interest you</p>
+      <div>
+        <div>
+          <input
+            type="checkbox"
+            id="sci"
+            value="Science"
+            v-model="checkedInterests"
+          />
+          <label for="sci">Science</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="math"
+            value="Mathematics"
+            v-model="checkedInterests"
+          />
+          <label for="math">Mathematics</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="engi"
+            value="Engineering"
+            v-model="checkedInterests"
+          />
+          <label for="engi">Engineering</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="lit"
+            value="Literature"
+            v-model="checkedInterests"
+          />
+          <label for="lit">Literature</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="hist"
+            value="History"
+            v-model="checkedInterests"
+          />
+          <label for="hist">History</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="phil"
+            value="Philosophy"
+            v-model="checkedInterests"
+          />
+          <label for="phil">Philosophy</label>
+        </div>
+      </div>
+      <p>Selected interests are: {{ checkedInterests.join(", ") }}</p>
+
+      <h3>Task 3: Dynamic options with v-for</h3>
+      <select v-model="selectedCountry">
+        <option disabled value="">Please select a country</option>
+        <option v-for="country in countries" v-bind:value="country">
+          {{ country }}
+        </option>
+      </select>
+      <span>Selected country is: {{ selectedCountry }}</span>
+    </div>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          email: "",
+          password: "",
+          phone: "",
+          checkedInterests: [],
+          countries: [
+            "England",
+            "Australia",
+            "USA",
+            "India",
+            "China",
+            "France",
+          ],
+          selectedCountry: "",
+        },
+      });
+    </script>
+    <style>
+      #app {
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </body>
+</html>
