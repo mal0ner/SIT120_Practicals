@@ -10,3 +10,11 @@ In this week, you will gain a better understanding of Vue.js Framework. You will
 
 V-model allows us to automatically align data between user input elements and state contained within the Vue object. As demonstrated in the task, this data
 can then be represented using Vue's declarative rendering syntax to be displayed back to the user.
+
+## Task 2: checkboxes
+
+**Reflection**:
+
+The v-model directive can be applied to a wide range of input types. When applied to checkboxes, v-model will output a boolean value indicating whether or not the
+box is selected. This behaviour can be modified to bind an alternate value by
+specifying it in the value attribute of the input element.
