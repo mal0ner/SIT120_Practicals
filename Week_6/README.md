@@ -18,3 +18,10 @@ can then be represented using Vue's declarative rendering syntax to be displayed
 The v-model directive can be applied to a wide range of input types. When applied to checkboxes, v-model will output a boolean value indicating whether or not the
 box is selected. This behaviour can be modified to bind an alternate value by
 specifying it in the value attribute of the input element.
+
+## Task 3: Dynamic Options
+
+**Reflection**:
+
+We can apply the v-for directive to create a list of user input options based off
+some data in the Vue object which dynamically updates whenever that underlying data changes. V-bind can also be used to bind some alternate value to the output of the wrapper v-model data.
