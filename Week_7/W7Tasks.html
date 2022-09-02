@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>
+      SIT120 Week 7 Tasks: Props, Registrations, Custom Events and Async
+    </title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>
+        SIT 120 Week 7 Tasks: Article website to demonstrate Vue components
+      </h1>
+      <h3>Articles:</h3>
+      <div v-for="(article, index) in articles">
+        <smarticle
+          v-bind:title="article.title"
+          @newtitle="(newtitle)=>articles[index].title=newtitle"
+          v-bind:author="article.author"
+          v-bind:note="article.note"
+        >
+          <template v-slot:main-content> {{ article.content }}</template>
+        </smarticle>
+      </div>
+    </div>
+
+    <script type="text/x-template" id="authors-template">
+        <div>
+          <h3>Author's Section</h3>
+          <p><b>Note From</b>
+            {{ author }}: <slot name='author-note'></slot>
+          </p>
+      </div>
+    </script>
+
+    <script type="text/x-template" id="smarticle-template">
+        <div>
+          <h1>{{ title }}</h1>
+          <p>By <b>{{ author }}</b></p>
+          <hr style="border-top: 3px solid #bbb">
+          <div>
+            <slot name="main-content"><slot>
+          </div>
+          <auth v-bind:author="author">
+              <template v-slot:author-note>{{note}}</template>
+          </auth>
+          <input type="text" id="update-title" v-model="newTitle">
+          <label for="update-title">Update Title for {{ title }} using events</label>
+          <button v-on:click="$emit('newtitle', newTitle)">Update</button>
+      </div>
+    </script>
+
+    <script>
+      let AuthorNote = {
+        template: "#authors-template",
+        props: ["author"],
+      };
+
+      Vue.component("smarticle", {
+        template: "#smarticle-template",
+        props: ["title", "author", "note"],
+        components: {
+          auth: AuthorNote,
+        },
+        data() {
+          return {
+            newTitle: "",
+          };
+        },
+      });
+
+      let app = new Vue({
+        el: "#app",
+        data: {
+          articles: [
+            {
+              title: "The Metaphysical Cheeseburger",
+              author: "Sarah Palin",
+              content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque odio excepturi? Quae atque tenetur eum consequuntur molestias iure, quis minus omnis, error accusamus similique facilis, quaerat dolor? Amet, voluptates.
+          Rem ab nesciunt amet ex sequi iusto repudiandae totam nobis nisi debitis praesentium, animi incidunt corrupti soluta consequuntur tempora deserunt, aut obcaecati error fuga! Consequatur ipsum dolorum assumenda ipsa rem.
+          Temporibus voluptas consectetur vel impedit dolorem placeat, reiciendis ipsam sapiente pariatur voluptatem ut quis provident a magni numquam quidem rem ea fugiat sequi quibusdam culpa? Veritatis ab modi commodi eos!
+          Eum illum eaque ipsum quis minima exercitationem qui adipisci porro? Aut, eaque dignissimos blanditiis pariatur corporis tempore necessitatibus nam nobis doloribus eveniet, animi repellendus omnis ipsum iste eos reprehenderit iusto?
+          Distinctio corporis est obcaecati harum blanditiis ut repellat ducimus voluptatibus molestiae eius! Odio, dolore similique corrupti sunt doloremque vero, veniam, earum ullam voluptates sit eaque rerum eius aliquid quia officiis.
+          Ipsa, adipisci mollitia sapiente consequatur animi consectetur obcaecati, vero, cupiditate modi illo dolorum. Recusandae sunt, incidunt maxime mollitia magnam vel facilis quas velit alias ipsam esse aspernatur dicta culpa id!
+          Animi provident suscipit rem, voluptates illo vel voluptatum ipsa impedit voluptatem repudiandae? Repudiandae, sed dicta neque ad quas, veritatis mollitia recusandae pariatur eius doloribus libero iure deleniti laudantium officiis. Delectus.
+          Eos consequuntur ut nemo porro, rerum et ipsam veritatis. Labore iste libero velit ex in reprehenderit nemo ipsum vel dolor quibusdam soluta, qui, quaerat atque quod, dolore porro? Eius, est!
+          Dicta perferendis ipsam, sint aut in, maiores ea delectus, rerum officia doloribus eligendi quaerat eius. Itaque doloribus laudantium voluptatem tenetur necessitatibus deleniti, ipsa molestias ex tempore a iusto consequatur quod?
+          Rerum libero nemo fugit consectetur autem odio, aliquam sunt aperiam voluptates repudiandae laborum tempore reprehenderit dicta provident porro deserunt fuga amet iusto sed minus a vitae itaque necessitatibus. Cum, consequatur?`,
+              note: "This was a great article to write, thanks to all my lovely readers!",
+            },
+            {
+              title: "The Windy City",
+              author: "Marko Zuszcak",
+              content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque odio excepturi? Quae atque tenetur eum consequuntur molestias iure, quis minus omnis, error accusamus similique facilis, quaerat dolor? Amet, voluptates.
+          Rem ab nesciunt amet ex sequi iusto repudiandae totam nobis nisi debitis praesentium, animi incidunt corrupti soluta consequuntur tempora deserunt, aut obcaecati error fuga! Consequatur ipsum dolorum assumenda ipsa rem.
+          Temporibus voluptas consectetur vel impedit dolorem placeat, reiciendis ipsam sapiente pariatur voluptatem ut quis provident a magni numquam quidem rem ea fugiat sequi quibusdam culpa? Veritatis ab modi commodi eos!
+          Eum illum eaque ipsum quis minima exercitationem qui adipisci porro? Aut, eaque dignissimos blanditiis pariatur corporis tempore necessitatibus nam nobis doloribus eveniet, animi repellendus omnis ipsum iste eos reprehenderit iusto?
+          Distinctio corporis est obcaecati harum blanditiis ut repellat ducimus voluptatibus molestiae eius! Odio, dolore similique corrupti sunt doloremque vero, veniam, earum ullam voluptates sit eaque rerum eius aliquid quia officiis.
+          Ipsa, adipisci mollitia sapiente consequatur animi consectetur obcaecati, vero, cupiditate modi illo dolorum. Recusandae sunt, incidunt maxime mollitia magnam vel facilis quas velit alias ipsam esse aspernatur dicta culpa id!
+          Animi provident suscipit rem, voluptates illo vel voluptatum ipsa impedit voluptatem repudiandae? Repudiandae, sed dicta neque ad quas, veritatis mollitia recusandae pariatur eius doloribus libero iure deleniti laudantium officiis. Delectus.
+          Eos consequuntur ut nemo porro, rerum et ipsam veritatis. Labore iste libero velit ex in reprehenderit nemo ipsum vel dolor quibusdam soluta, qui, quaerat atque quod, dolore porro? Eius, est!
+          Dicta perferendis ipsam, sint aut in, maiores ea delectus, rerum officia doloribus eligendi quaerat eius. Itaque doloribus laudantium voluptatem tenetur necessitatibus deleniti, ipsa molestias ex tempore a iusto consequatur quod?
+          Rerum libero nemo fugit consectetur autem odio, aliquam sunt aperiam voluptates repudiandae laborum tempore reprehenderit dicta provident porro deserunt fuga amet iusto sed minus a vitae itaque necessitatibus. Cum, consequatur?`,
+              note: "I wish I did not write this article, how depressing! Anyway, have a nice day",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
