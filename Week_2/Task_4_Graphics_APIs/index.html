@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="canvas-container">
+        <h2>Canvas Demo</h2>
+        <canvas
+          id="circle-canvas"
+          height="100"
+          width="150"
+          style="border: 1px solid black"
+        ></canvas>
+        <script>
+          let canv = document.getElementById("circle-canvas");
+          let ctx = canv.getContext("2d");
+          ctx.beginPath();
+          ctx.arc(75, 50, 40, 0, 2 * Math.PI);
+          ctx.stroke();
+        </script>
+      </div>
+      <div class="video-container">
+        <h2>Video Demo</h2>
+        <video
+          src="./candle.mp4"
+          width="120"
+          height="250"
+          style="margin-left: 50px"
+          controls
+        ></video>
+      </div>
+      <div class="audio-container">
+        <h2>Audio Demo</h2>
+        <audio src="sound.mp3" controls></audio>
+      </div>
+      <div class="embedded-container">
+        <h2>Embedded Demo</h2>
+        <iframe
+          src="https://www.youtube.com/embed/iH5Jas1NfmE"
+          frameborder="1"
+          height="480"
+          width="270"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
